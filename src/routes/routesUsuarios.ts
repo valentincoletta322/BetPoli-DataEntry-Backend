@@ -29,5 +29,5 @@ routerUsuarios.post('/login', async (_req,_res) => {
         respuesta["claveJWT"] = generarClave(_req.body.username);
         _res.json(respuesta);
     }
-    else _res.status(200).send('Wrong.');
+    else _res.status(200).send('Alguno de los datos ingresados no es correcto.');
 });
