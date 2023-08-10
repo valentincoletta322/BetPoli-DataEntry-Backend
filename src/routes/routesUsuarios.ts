@@ -2,7 +2,6 @@ import { Router } from "express";
 import { Usuario } from "../clases/Usuario";
 import { findUsuario, insertUsuario } from "../mongos/usuariosMongo";
 import { createHash } from 'node:crypto'
-import { JsonObject } from "swagger-ui-express";
 import { generarClave } from "../verificacion";
 
 function sha256(content: string) {
