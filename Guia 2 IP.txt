@@ -16,13 +16,14 @@ i) ?
 4) ?
 5) ?
 6) Puede tomar la secuencia s y no pasar a raíz los elementos negativos.
-7) Puedo tener elementos repetidos, pero (2,2,1) no seria salida válida ya no se cumple esa salida para todos los valores de s.
+7) Puedo tener elementos repetidos, pero (2,2,1) no seria salida válida ya no se cumple esa salida para todos los valores de s. // Seria valida, habria
+que especificar que se quiere que corresponda cada raiz.
 -------------------------------------------- EJERCICIO 5 -----------------------------------------------------------
 
 problema cantidadDeColectivos(todosLosColectivos: sec<Z>, unaLinea: Z, colectivosEnUnDia: sec<Z>): Z(int) {
-	requiere { pertenece(unaLinea, todosLosColectivos) = true }
+	requiere { pertenece(unaLinea, todosLosColectivos) = true } //requiere no es parte de la programacion
 	// requiere { todosLosColectivos no tiene elementos repetidos } 
-	asegura { res = length(a) } // igual a la cantidad de veces que "unaLinea" aparece en colectivosEnUnDia
+	asegura { res igual a la cantidad de veces que "unaLinea" aparece en colectivosEnUnDia }
 
 }
 
@@ -30,7 +31,6 @@ problema compararLineas(primeraLinea, segundaLinea: Z, colectivosEnUnDia: sec<Z>
 
 	requiere { True } // ¿pertenece a la lista de colectivos si lo veo en cantidadDeColectivos()?
 	asegura { res = primeraLinea si y solo si cantidadDeColectivos(primeraLinea) > cantidadDeColectivos(segundaLinea) }
-	asegura { res = segundaLinea si y solo si cantidadDeColectivos(primeraLinea) < cantidadDeColectivos(segundaLinea) }
 	asegura { res = segundaLinea si y solo si cantidadDeColectivos(primeraLinea) < cantidadDeColectivos(segundaLinea) }
 	// y si son iguales?
 }
